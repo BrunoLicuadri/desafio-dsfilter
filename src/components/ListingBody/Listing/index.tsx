@@ -1,6 +1,6 @@
 import './style.css';
-import * as productService from '../../services/product-service.ts';
-import ListingCard from '../ListingCard/index.tsx';
+import * as productService from '../../../services/product-service';
+import ListingCard from './ListingCard';
 
 
 export default function Listing() {

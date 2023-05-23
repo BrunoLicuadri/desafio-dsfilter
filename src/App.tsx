@@ -1,6 +1,6 @@
-import Filter from "./components/Filter";
+import Filter from "./components/ListingBody/Filter";
 import Header from "./components/Header";
-import Listing from "./components/Listing";
+import Listing from "./components/ListingBody/Listing";
 
 function App() {
 
