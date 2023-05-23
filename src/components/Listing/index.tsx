@@ -1,35 +1,19 @@
 import './style.css';
+import * as productService from '../../services/product-service.ts';
+import ListingCard from '../ListingCard/index.tsx';
+
 
 export default function Listing() {
+    
     return (
         <main>
             <section className="container listing-details">
+                {
+                    productService.findAll().map(
+                        product => <ListingCard key={product.id} product={product} />
+                    )
+                }
                 
-                <div className="listing-card">
-                    <h3>Pc Gamer Pro</h3>
-                    <span>R$ 1200.00</span>
-                </div>
-                <div className="listing-card">
-                    <h3>Pc Gamer Pro</h3>
-                    <span>R$ 1200.00</span>
-                </div>
-                <div className="listing-card">
-                    <h3>Pc Gamer Pro</h3>
-                    <span>R$ 1200.00</span>
-                </div>
-                <div className="listing-card">
-                    <h3>Pc Gamer Pro</h3>
-                    <span>R$ 1200.00</span>
-                </div>
-                <div className="listing-card">
-                    <h3>Pc Gamer Pro</h3>
-                    <span>R$ 1200.00</span>
-                </div>
-                <div className="listing-card">
-                    <h3>Pc Gamer Pro</h3>
-                    <span>R$ 1200.00</span>
-                </div>
-
             </section>
 
         </main>
