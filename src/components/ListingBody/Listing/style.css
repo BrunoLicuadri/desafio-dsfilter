@@ -1,7 +1,0 @@
-.listing-details{
-    background-color: var(--dsf-color-bg-secondary);
-    padding: 10px;
-    border-radius: 5px;
-    min-height: 408px;
-    flex-direction: column;
-}

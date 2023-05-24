@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import './styles.css';
 
-type Props = {
-    btnText: string;
-}
-
 type FormData ={
     minValue?: number;
     maxValue?: number;
 }
 
-export default function Filter({ btnText }: Props) {
+type Props = {
+    onFilter: Function
+}
+
+export default function Filter({onFilter}: Props) {
 
     const [formData, setFormData] = useState<FormData>({});
 
@@ -22,8 +22,8 @@ export default function Filter({ btnText }: Props) {
 
     function handleSubmit(event: any){
         event.preventDefault();
-        console.log(formData.minValue || 0);
-        console.log(formData.maxValue || Number.MAX_VALUE);
+        setFormData(formData);
+        onFilter(formData.minValue, formData.maxValue)
     }
 
     return (
@@ -52,7 +52,7 @@ export default function Filter({ btnText }: Props) {
                             />
                         </div>
                         <div>
-                            <button type="submit" className="btn-details">{btnText}</button>
+                            <button type="submit" className="btn-details">Filtrar</button>
                         </div>
                     </div>
                 </form>

@@ -1,5 +1,6 @@
+import { ProductDTO } from '../../../../Models/product';
 import './styles.css';
-import { ProductDTO } from "../Models/product"
+
 
 type Props = {
     product: ProductDTO;
