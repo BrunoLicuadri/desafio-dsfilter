@@ -1,4 +1,4 @@
-import { ProductDTO } from '../../../../Models/product';
+import { ProductDTO } from '../../../Models/product';
 import './styles.css';
 
 

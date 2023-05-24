@@ -22,9 +22,12 @@ export default function ListingBody() {
 
     const [products, setProducts] = useState<ProductDTO[]>([]);
 
+    const [contextListCount, setContextListCount] = useState<number>(0);
+
     useEffect(() => {
         const newFilter = productService.findByPrice(queryParams.minValue, queryParams.maxValue);
         setProducts(newFilter);
+        setContextListCount(newFilter.length);
       }, [queryParams]);
 
       function handleFilter(min: number, max: number){

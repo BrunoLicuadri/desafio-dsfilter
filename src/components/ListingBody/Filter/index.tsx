@@ -14,6 +14,7 @@ export default function Filter({onFilter}: Props) {
 
     const [formData, setFormData] = useState<FormData>({});
 
+
     function handleInputChange(event: any){
         const value = event.target.value;
         const name = event.target.name;
