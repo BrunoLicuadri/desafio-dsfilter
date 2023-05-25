@@ -7,6 +7,7 @@ type Props = {
 }
 
 export default function Header({ title }: Props) {
+    
     const { contextItemCount } = useContext(ContextItemCount);
 
     return (

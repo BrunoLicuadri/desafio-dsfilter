@@ -8,13 +8,10 @@ function App() {
   const [contextItemCount, setContextItemCount] = useState<number>(0);
 
   return (
-    <>
       <ContextItemCount.Provider value={{ contextItemCount, setContextItemCount }}>
         <Header title="DSFilter" />
         <ListingBody />
       </ContextItemCount.Provider>
-    </>
-
   )
 }
 
